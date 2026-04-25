@@ -1,6 +1,6 @@
 # Challenge 2
 
-I created a Python script called `myscript.py` to show basic system information from a Linux machine.
+I created a Python script called `system-info.py` to show basic system information from a Linux machine.
 
 The script uses only Python standard libraries and common Linux files/commands, such as `/proc`, `ps`, `ss` and `df`-like disk information.
 
@@ -12,11 +12,11 @@ From this directory:
 
 Give execution permission:
 
-`chmod +x myscript.py`
+`chmod +x system-info.py`
 
 Show help:
 
-`./myscript.py --help`
+`./system-info.py --help`
 
 ## Options
 
@@ -32,27 +32,27 @@ Show help:
 
 Disk:
 
-`./myscript.py --disk`
+`./system-info.py --disk`
 
 CPU:
 
-`./myscript.py --cpu`
+`./system-info.py --cpu`
 
 Listening ports:
 
-`./myscript.py --ports`
+`./system-info.py --ports`
 
 RAM:
 
-`./myscript.py --ram`
+`./system-info.py --ram`
 
 Top 10 processes by CPU:
 
-`./myscript.py --overview`
+`./system-info.py --overview`
 
 All checks together:
 
-`./myscript.py --disk --cpu --ports --ram --overview`
+`./system-info.py --disk --cpu --ports --ram --overview`
 
 ## Short explanation
 
