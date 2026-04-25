@@ -52,3 +52,38 @@ A working Helm chart that can be:
 - [ ] Deployment targets container port 8080
 - [ ] Service correctly routes to the deployment
 - [ ] All hardcoded values are parameterized in values.yaml
+
+## Solution
+
+I completed the chart using the existing scaffold in `server-chart`.
+
+Files added or changed:
+
+| File | Purpose |
+| --- | --- |
+| `server-chart/values.yaml` | Configurable chart values |
+| `server-chart/templates/deployment.yaml` | Kubernetes Deployment |
+| `server-chart/templates/service.yaml` | Kubernetes Service |
+| `server-chart/templates/_helpers.tpl` | Shared names and labels |
+
+The default image is:
+
+`orcrist-server:latest`
+
+This is the local Docker image built from `challenge-3/Dockerfile`.
+
+Commands used:
+
+`helm lint ./server-chart`
+
+`helm template server ./server-chart`
+
+To install the chart in a Kubernetes cluster:
+
+`helm install server ./server-chart`
+
+Notes:
+
+- the Deployment exposes container port `8080`
+- the Service sends traffic to container port `8080`
+- image, replicas, service type, service port, container port and resources are configured from `values.yaml`

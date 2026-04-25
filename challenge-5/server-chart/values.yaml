@@ -1,9 +1,15 @@
-# Challenge 5: Complete this values file
-#
-# Define values for:
-# - image: repository, tag, pullPolicy
-# - replicaCount
-# - service: type, port
-# - resources (optional)
-#
-# Hint: The Python server listens on port 8080
+replicaCount: 1
+
+image:
+  repository: orcrist-server # Local image built from challenge-3/Dockerfile
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+container:
+  port: 8080
+
+resources: {}
