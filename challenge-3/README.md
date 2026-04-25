@@ -6,6 +6,8 @@ The server listens on port `8080`.
 
 I also copied the `challenge-2/system-info.py` script into the same image, so the container can be used to test both Challenge 2 and Challenge 3.
 
+The container runs as a non-root user called `appuser` with UID `10001`.
+
 ## Build the image
 
 From the repository root:
@@ -59,3 +61,7 @@ Run the system info script:
 `./system-info.py --ram`
 
 `./system-info.py --overview`
+
+Check the container user:
+
+`id`

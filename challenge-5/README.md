@@ -87,3 +87,5 @@ Notes:
 - the Deployment exposes container port `8080`
 - the Service sends traffic to container port `8080`
 - image, replicas, service type, service port, container port and resources are configured from `values.yaml`
+- the Pod runs as a non-root user using UID `10001`
+- privilege escalation is disabled in the container security context
