@@ -72,6 +72,10 @@ The default image is:
 
 This is the local Docker image built from `challenge-3/Dockerfile`.
 
+Because the Challenge 3 image also includes `challenge-2/system-info.py`, the Docker build must be executed from the repository root:
+
+`docker build -f challenge-3/Dockerfile -t orcrist-server:latest .`
+
 Commands used:
 
 `helm lint ./server-chart`
